@@ -5,10 +5,17 @@ import Dashboard from './Components/Dashboard'
 
 
 function App() {
+  const {Vegetablesproducts} = VegetablesData;
+  const {Fruitsproducts} = FruitsData;
+  const {Snacksproducts} = SnacksData;
+  const {Beveragesproducts} = BeveragesData;
+  
+
   return (
     <div>
     <LoginPage />
-   <Dashboard/>
+    <Dashboard Vegetablesproducts = {Vegetablesproducts} Fruitsproducts= {Fruitsproducts} Snacksproducts={Snacksproducts} Beveragesproducts= {Beveragesproducts}/>
+   
     </div>
 
 //     <Router>

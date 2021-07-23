@@ -1,44 +1,15 @@
 import React from 'react'
 
-function Fruits() {
+function Fruits(props) {
+    const { Fruitsproducts} = props;
     return (
         <div>
-            <dl>
-          <dt>Mango</dt>
-          <dd>Price:Rs.50/kg</dd>
-          <dd>
-            {" "}
-            <button> Add to Cart</button>
-          </dd>
-
-          <dt>Mango</dt>
-          <dd>Price:Rs.50/kg</dd>
-          <dd>
-            {" "}
-            <button> Add to Cart</button>
-          </dd>
-
-          <dt>Mango</dt>
-          <dd>Price:Rs.50/kg</dd>
-          <dd>
-            {" "}
-            <button> Add to Cart</button>
-          </dd>
-
-          <dt>Mango</dt>
-          <dd>Price:Rs.50/kg</dd>
-          <dd>
-            {" "}
-            <button> Add to Cart</button>
-          </dd>
-
-          <dt>Mango</dt>
-          <dd>Price:Rs.50/kg</dd>
-          <dd>
-            {" "}
-            <button> Add to Cart</button>
-          </dd>
-        </dl>
+            {/* <img className = "small" src = {Vegetablesproducts.image} alt = {Vegetablesproducts.name}></img> */}
+            <h3>{Fruitsproducts.name}</h3>
+            <div>Rs{Fruitsproducts.price}</div>
+            <div>
+                <button> Add to Cart</button>
+            </div>
         </div>
     )
 }

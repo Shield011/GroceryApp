@@ -23,6 +23,9 @@ function Forms() {
     };
     localStorage.setItem("loginData", JSON.stringify(loginCredentials));
     history.push("/Dashboard");
+    console.log("clicked");
+    setInput("");
+    setPassword("");
 
     
   };
