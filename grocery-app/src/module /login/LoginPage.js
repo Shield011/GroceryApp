@@ -1,6 +1,5 @@
 import React, { useState } from "react";
-import history from "../history";
-
+import history from "../../history";
 
 
 function Forms() {
@@ -22,7 +21,7 @@ function Forms() {
       id: Math.floor(Math.random() * 10000),
     };
     localStorage.setItem("loginData", JSON.stringify(loginCredentials));
-    history.push("/Dashboard");
+    history.push("/dashboard");
     console.log("clicked");
     setInput("");
     setPassword("");
