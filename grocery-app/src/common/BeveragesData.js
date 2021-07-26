@@ -4,6 +4,7 @@ const BeveragesData = {
         id: '1',
         name: 'Coca-Cola',
         price: 20,
+        // image: ''
   
       },
       {

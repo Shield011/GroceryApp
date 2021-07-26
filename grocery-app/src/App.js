@@ -1,25 +1,20 @@
 import './App.css';
-
 import LoginPage from './module /login/LoginPage';
 import Dashboard from './module /dashboard/Dashboard';
-import VegetablesData from './common/VegetablesData';
-import FruitsData from './common/FruitsData';
-import SnacksData from './common/SnacksData';
-import BeveragesData from './common/BeveragesData';
 import Routes from './Routes';
 
 
+
 function App() {
-  const {Vegetablesproducts} = VegetablesData;
-  const {Fruitsproducts} = FruitsData;
-  const {Snacksproducts} = SnacksData;
-  const {Beveragesproducts} = BeveragesData;
+  
   
 
   return (
     <div>
     <LoginPage />
-    {/* <Dashboard Vegetablesproducts = {Vegetablesproducts} Fruitsproducts= {Fruitsproducts} Snacksproducts={Snacksproducts} Beveragesproducts= {Beveragesproducts}/> */}
+
+    <Dashboard /> 
+   
    
     </div>
 

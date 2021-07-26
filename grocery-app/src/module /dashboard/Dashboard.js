@@ -1,68 +1,71 @@
-import React from "react";
+import React, {useState} from "react";
 import {withRouter} from 'react-router-dom';
-import { Navbar, Nav, Form, Button } from 'react-bootstrap';
+import Navigation from "../../components/Navigation";
+import Vegetables from "./Vegetables";
+import Fruits from "./Fruits";
+import Snacks from "./Snacks";
+import Beverages from "./Beverages"
+import VegetablesData from "../../common/VegetablesData";
+import FruitsData from "../../common/FruitsData";
+import SnacksData from "../../common/SnacksData";
+import BeveragesData from "../../common/BeveragesData";
+import "./Dashboard.css";
+import Cart from "../cart/Cart";
 
 
-function Dashboard({Vegetablesproducts, Fruitsproducts, Snacksproducts, Beveragesproducts}) {
+
+function Dashboard() {
   // const {Vegetablesproducts} = props;
   // const {Fruitsproducts} = props;
   // const {Snacksproducts} = props;
   // const {Beveragesproducts} = props;
+  const {Vegetablesproducts} = VegetablesData;
+  const {Fruitsproducts} = FruitsData;
+  const {Snacksproducts} = SnacksData;
+  const {Beveragesproducts} = BeveragesData;
+  const[cartItems, setCartItems] = useState([]);
+
+  
   
   return (
     <div>
       <header>
-        <p> Welcome</p>
-        <p>Username</p>
-        <p>Cart</p>
-        <p> My Account</p>
+        <p> Welcome to Grocery Shop!</p>
       </header>
+      <Navigation />
       <main className = "block col-2">
-      <h2> Vegetables </h2>
+      <h2 className = "product-name"> Vegetables </h2>
       < div className = "row">
         {Vegetablesproducts.map((Vegetablesproducts) => (
-          <Vegetables key = {Vegetablesproducts.id} Vegetablesproducts = {Vegetablesproducts}></Vegetables>
+          <Vegetables  key = {Vegetablesproducts.id} Vegetablesproducts = {Vegetablesproducts}></Vegetables>
 
         ))}
       </div>
-      <h2> Fruits </h2>
+      <h2 className = "product-name"> Fruits </h2>
       <div className = "row">
         {Fruitsproducts.map((Fruitsproducts) => (
-          <Fruits key = {Fruitsproducts.id} Fruitsproducts = {Fruitsproducts}></Fruits>
+          <Fruits cartItems = {cartItems} setCartItems = {setCartItems} key = {Fruitsproducts.id} Fruitsproducts = {Fruitsproducts}></Fruits>
 
         ))}
       </div>
-      <h2>Snacks</h2>
+      <h2 className = "product-name">Snacks</h2>
       <div className = "row">
         {Snacksproducts.map((Snacksproducts) => (
-          <Snacks key = {Snacksproducts.id} Snacksproducts = {Snacksproducts}></Snacks>
+          <Snacks cartItems = {cartItems} setCartItems = {setCartItems} key = {Snacksproducts.id} Snacksproducts = {Snacksproducts}></Snacks>
 
         ))}
       </div>
-      <h2>Beverages</h2>
+      <h2 className = "product-name">Beverages</h2>
       <div className = "row">
         {Beveragesproducts.map((Beveragesproducts) => (
-          <Beverages key = {Beveragesproducts.id} Beveragesproducts = {Beveragesproducts}></Beverages>
+          <Beverages cartItems = {cartItems} setCartItems = {setCartItems} key = {Beveragesproducts.id} Beveragesproducts = {Beveragesproducts}></Beverages>
 
         ))}
       </div>
 
       </main>
+      <Cart cartItems = {cartItems} setCartItems = {setCartItems}/>
      
-      {/* <Navbar bg="primary" variant="dark">
-            <Navbar.Brand href="#home"></Navbar.Brand>
-            <Navbar.Toggle aria-controls="basic-navbar-nav" />
-            <Navbar.Collapse id="basic-navbar-nav">
-                <Nav className="mr-auto">
-                    <Nav.Link href="/">Vegetables</Nav.Link>
-                    <Nav.Link href="/Fruits">Fruits</Nav.Link>
-                    <Nav.Link href="/Beverages">Beverages</Nav.Link>
-                    <Nav.Link href="/Snacks">Snacks</Nav.Link>
-                </Nav>
-            </Navbar.Collapse>
-        </Navbar> */}
-
-    
     </div>
   );
 }

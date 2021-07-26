@@ -1,0 +1,59 @@
+*{
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-size: 20px;
+    background: image('./src/images/groceryshop.png');
+   
+
+}
+
+.page-heading{
+    text-align:center;
+    font-size: 30px;
+    font-weight: bold;;
+
+}
+.logIn{
+    position: relative;
+}
+
+.login-form{
+    border: 3px solid #f1f1f1;
+    padding: 20px;
+    width: 30%;
+    margin-left: 37%;
+    margin-top: 10%;
+    
+
+}
+
+.username-label, .password-label {
+    font-weight: bold;
+    font-size: 22px;
+}
+
+.username-input, .password-input {
+    width: 100%;
+    padding: 12px 20px;
+    margin: 8px 0;
+    display: inline-block;
+    border: 1px solid #ccc;
+    box-sizing: border-box;
+    border-radius: 10px;
+}
+
+.submit-button {
+    background-color: #0aa879;
+    color: white;
+    padding: 14px 20px;
+    margin: 8px 0;
+    border: none;
+    cursor: pointer;
+    width: 100%;
+    border-radius: 10px;
+
+}
+
+.submit-button:hover {
+    background-color: #047954;
+    
+}

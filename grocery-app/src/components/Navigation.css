@@ -1,0 +1,33 @@
+.menu{
+    list-style-type: none;
+    overflow: hidden;
+    border: 2px solid;
+    padding: 0;
+    margin: 0;
+    background-color: rgb(75, 143, 143);
+
+}
+
+.menu-item{
+    float: left;
+   
+    
+
+}
+a{
+    color: white;
+    text-decoration: none;
+    display: block;
+    text-align: center;
+    padding: 14px 16px;
+}
+
+a:hover{
+    background-color: lightseagreen;
+}
+
+.icons{
+    padding: 8px;
+
+   
+}

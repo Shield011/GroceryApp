@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import history from "../../history";
-
+import "./LoginPage.css";
 
 function Forms() {
  
@@ -30,22 +30,28 @@ function Forms() {
   };
 
   return (
-      <div className="LogIn">
-        <form className="Login-form">
-          <label className="Username-label">Username</label>
-          <input
+      <div className="logIn">
+        <h1 className = "page-heading">Welcome!</h1>
+        <form className="login-form">
+          {/* <img src = {question} alt = "user"></img> */}
+          <label className="username-label">Username</label>
+          <br></br>
+          <input className = 'username-input'
             type="text"
-            placeholder="Username"
+            placeholder="Enter Username"
             value={input}
             onChange={onEmailChange}
           />
-          <label className="Password-label">Password</label>
-          <input
-            type="text"
-            placeholder="Password"
+          <br></br>
+          <label className="password-label">Password</label>
+          <br></br>
+          <input className = "password-input"
+            type="password"
+            placeholder="Enter Password"
             value={password}
             onChange={onPasswordChange}
           />
+          <br></br>
           <button className="submit-button" onClick={clickHandlerLogin}>
             Log In
           </button>

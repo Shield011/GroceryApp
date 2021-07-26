@@ -3,10 +3,10 @@ import { Router, Switch, Route } from "react-router-dom";
 import history from './history';
 import LoginPage from './module /login/LoginPage';
 import Dashboard from './module /dashboard/Dashboard';
-import Vegetables from './common/Vegetables';
-import Fruits from './common/Fruits';
-import Snacks from './common/Snacks';
-import Beverages from './common/Beverages';
+import Vegetables from './module /dashboard/Vegetables';
+import Fruits from './module /dashboard/Fruits';
+import Snacks from './module /dashboard/Snacks';
+import Beverages from './module /dashboard/Beverages';
 
 function Routes() {
     return (
