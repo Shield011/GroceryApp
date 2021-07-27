@@ -1,27 +1,19 @@
-import React, {useState} from 'react'
+import React, { useState } from "react";
+import "./cart.css";
 
-function Cart(cartItems, setCartItems) {
-   
-    return (
-       <>
-            <h2> Cart Items</h2>
-            <div>
-                {cartItems.length === 0 && <div> Your Cart is Empty</div>}
-                {cartItems.map((item) => (
-                    <div key={item.id} className="row">
-                        <div className="col-2">{item.name}</div>
+function Cart({cartItems}) {
 
-                        
-            </div>
-
-))}
-                
-
-                
-          </>  
-     )  
-   )}
-                
+    console.log("l", cartItems.length)
+  return (
+     <>
+       <h2> Cart Items</h2>
     
-export default Cart
- 
+       {cartItems.length === 0 && <div className = "empty-cart"> Your Cart is Empty</div>}
+    
+       
+      
+    </> 
+  );
+}
+
+export default Cart;

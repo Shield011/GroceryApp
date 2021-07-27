@@ -2,15 +2,15 @@ import React from 'react'
 import "./Dashboard.css";
 
 
-function Fruits(props) {
-    const { Fruitsproducts} = props;
+function Fruits({fruitsproducts, onAdd}) {
+   
     return (
         <div className = "row-items">
-            {/* <img className = "small" src = {Vegetablesproducts.image} alt = {Vegetablesproducts.name}></img> */}
-            <h3>{Fruitsproducts.name}</h3>
-            <div className = "price">Rs. {Fruitsproducts.price}</div>
+            <img className = "small" src = {fruitsproducts.image} alt = {fruitsproducts.name}></img>
+            <h3>{fruitsproducts.name}</h3>
+            <div className = "price">Rs. {fruitsproducts.price}</div>
             <div>
-                <button > Add to Cart</button>
+                <button className = "add-to-cart-btn" onClick = {onAdd}> Add to Cart</button>
             </div>
         </div>
     )

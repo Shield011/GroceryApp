@@ -1,0 +1,12 @@
+h2{
+    font-size: 30px;
+    background-color: yellow;
+    padding: 10px;
+
+}
+
+
+.empty-cart{
+    color: grey;
+    text-align: center;
+}

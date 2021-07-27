@@ -2,6 +2,9 @@ import React, { useState } from "react";
 import history from "../../history";
 import "./LoginPage.css";
 
+import question from "../../assets/img/question.png";
+
+
 function Forms() {
  
   const [input, setInput] = useState();
@@ -28,12 +31,16 @@ function Forms() {
 
     
   };
+  console.log(question);
 
   return (
+   
       <div className="logIn">
         <h1 className = "page-heading">Welcome!</h1>
         <form className="login-form">
-          {/* <img src = {question} alt = "user"></img> */}
+          <img src = {question} alt = "user" ></img>
+          <br />
+          <br />
           <label className="username-label">Username</label>
           <br></br>
           <input className = 'username-input'
@@ -52,10 +59,13 @@ function Forms() {
             onChange={onPasswordChange}
           />
           <br></br>
-          <button className="submit-button" onClick={clickHandlerLogin}>
+          <button className="login-button" onClick={clickHandlerLogin}>
             Log In
           </button>
         </form>
+        <br />
+        <br/>
+       
       </div>
    
   );

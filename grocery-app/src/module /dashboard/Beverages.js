@@ -2,15 +2,15 @@ import React from 'react'
 import "./Dashboard.css";
 
 
-function Beverages(props) {
-    const {Beveragesproducts} = props;
+function Beverages({beveragesproducts, onAdd}) {
+    
     return (
         <div className = "row-items">
-        {/* <img className = "small" src = {Vegetablesproducts.image} alt = {Vegetablesproducts.name}></img> */}
-        <h3>{Beveragesproducts.name}</h3>
-        <div className = "price">Rs. {Beveragesproducts.price}</div>
+        <img className = "small" src = {beveragesproducts.image} alt = {beveragesproducts.name}></img>
+        <h3>{beveragesproducts.name}</h3>
+        <div className = "price">Rs. {beveragesproducts.price}</div>
         <div>
-            <button> Add to Cart</button>
+            <button className = "add-to-cart-btn" onClick = {onAdd}> Add to Cart</button>
         </div>
     </div>
     )

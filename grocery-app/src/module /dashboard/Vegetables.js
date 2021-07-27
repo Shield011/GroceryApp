@@ -3,30 +3,19 @@ import "./Dashboard.css";
 
 
 
-function Vegetables({Vegetablesproducts, cartItems, setCartItems}) {
+function Vegetables({vegetablesproducts, onAdd}) {
    
 
-    const onAdd = (product) => {
-        const exist = cartItems.find((x) => x.id === product.id);
-        if (exist) {
-          setCartItems(
-            cartItems.map((x) =>
-              x.id === product.id ? { ...exist, qty: exist.qty + 1 } : x
-            )
-          );
-        } else {
-          setCartItems([...cartItems, { ...product, qty: 1 }]);
-        }
-      };
+    
     
    
     return (   
         <div className = "row-items">
-            {/* <img className = "small" src = {Vegetablesproducts.image} alt = {Vegetablesproducts.name}></img> */}
-            <h3>{Vegetablesproducts.name}</h3>
-            <div className = "price">Rs. {Vegetablesproducts.price}</div>
+            <img className = "small" src = {vegetablesproducts.image} alt = {vegetablesproducts.name}></img>
+            <h3>{vegetablesproducts.name}</h3>
+            <div className = "price">Rs. {vegetablesproducts.price}</div>
             <div>
-                <button onClick = {onAdd}> Add to Cart</button>
+                <button className = "add-to-cart-btn"onClick = {onAdd} > Add to Cart</button>
             </div>
         </div>
     )

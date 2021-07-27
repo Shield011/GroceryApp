@@ -14,16 +14,21 @@ import Cart from "../cart/Cart";
 
 
 
+
 function Dashboard() {
-  // const {Vegetablesproducts} = props;
-  // const {Fruitsproducts} = props;
-  // const {Snacksproducts} = props;
-  // const {Beveragesproducts} = props;
-  const {Vegetablesproducts} = VegetablesData;
-  const {Fruitsproducts} = FruitsData;
-  const {Snacksproducts} = SnacksData;
-  const {Beveragesproducts} = BeveragesData;
+  
+  const {vegetablesproducts} = VegetablesData;
+  const {fruitsproducts} = FruitsData;
+  const {snacksproducts} = SnacksData;
+  const {beveragesproducts} = BeveragesData;
   const[cartItems, setCartItems] = useState([]);
+
+
+  const onAdd = (product) => {
+    console.log("yo");
+    setCartItems([...cartItems, product]);
+
+  }
 
   
   
@@ -36,35 +41,35 @@ function Dashboard() {
       <main className = "block col-2">
       <h2 className = "product-name"> Vegetables </h2>
       < div className = "row">
-        {Vegetablesproducts.map((Vegetablesproducts) => (
-          <Vegetables  key = {Vegetablesproducts.id} Vegetablesproducts = {Vegetablesproducts}></Vegetables>
+        {vegetablesproducts.map((vegetablesproducts) => (
+          <Vegetables  key = {vegetablesproducts.id} vegetablesproducts = {vegetablesproducts} onAdd = {onAdd}></Vegetables>
 
         ))}
       </div>
       <h2 className = "product-name"> Fruits </h2>
       <div className = "row">
-        {Fruitsproducts.map((Fruitsproducts) => (
-          <Fruits cartItems = {cartItems} setCartItems = {setCartItems} key = {Fruitsproducts.id} Fruitsproducts = {Fruitsproducts}></Fruits>
+        {fruitsproducts.map((fruitsproducts) => (
+          <Fruits key = {fruitsproducts.id} fruitsproducts = {fruitsproducts} onAdd = {onAdd}></Fruits>
 
         ))}
       </div>
       <h2 className = "product-name">Snacks</h2>
       <div className = "row">
-        {Snacksproducts.map((Snacksproducts) => (
-          <Snacks cartItems = {cartItems} setCartItems = {setCartItems} key = {Snacksproducts.id} Snacksproducts = {Snacksproducts}></Snacks>
+        {snacksproducts.map((snacksproducts) => (
+          <Snacks key = {snacksproducts.id} snacksproducts = {snacksproducts} onAdd = {onAdd}></Snacks>
 
         ))}
       </div>
       <h2 className = "product-name">Beverages</h2>
       <div className = "row">
-        {Beveragesproducts.map((Beveragesproducts) => (
-          <Beverages cartItems = {cartItems} setCartItems = {setCartItems} key = {Beveragesproducts.id} Beveragesproducts = {Beveragesproducts}></Beverages>
+        {beveragesproducts.map((beveragesproducts) => (
+          <Beverages key = {beveragesproducts.id} beveragesproducts = {beveragesproducts} onAdd = {onAdd}></Beverages>
 
         ))}
       </div>
 
       </main>
-      <Cart cartItems = {cartItems} setCartItems = {setCartItems}/>
+      <Cart cartItems = {cartItems} />
      
     </div>
   );
