@@ -1,66 +1,141 @@
-p{
-    font-size: 35px;
-    font-weight: bold;
-    border: rgb(184, 230, 18) solid;
-    padding: 12px;
-    background-color: rgb(184, 230, 18);
-    
-
+.header {
+  display: flex;
+  flex-direction: row;
+  height: 70px;
+  width: 99.8%;
+  background-color: rgb(75, 77, 75);
+  border: 2px solid black;
 }
 
-.row{
-    display: flex;
-    flex-wrap: wrap;
-   
+.dashboard-heading {
+  font-size: 20px;
+  font-weight: bold;
+  border: rgb(46, 48, 47) solid;
+  padding: 14px;
+  padding-top: 20px;
+  background-color: rgb(75, 77, 75);
+  padding-left: 14px;
+  width: 9%;
+  color: white;
+  text-align: center;
 }
 
-.small{
-    height: 200px;
-    width: 250px;
+.search-form {
+  width: 65%;
+  background-color: rgb(75, 77, 75);
+  border: rgb(46, 48, 47) solid;
+  text-align: center;
 }
 
-.product-name{
-    border:3px solid rgb(76, 159, 236);
-    font-size: 25px;
-    padding: 10px;
-    border-radius: 6px;
-    background-color: rgb(76, 159, 236);
+.search-btn {
+  padding: 12px;
+  background-color: rgb(114, 117, 115);
+  border: none;
+  color: white;
+  width: 10%;
 }
 
-.row-items{
-    padding: 10px;
-    border: 2px solid grey;
-    margin: 10px;
-    height: auto;
-    width: auto;
-
+.search-input {
+  padding: 10px;
+  margin: 8px;
+  width: 40%;
 }
 
-.add-to-cart-btn{
-    width: 100%;
-    background-color: rgb(145, 214, 197);
-    border: rgb(145, 214, 197);
-    padding: 6px;
-    border-radius: 6px;
-    color: white;
-    cursor: pointer;
+.cart-icon,
+.account-icon,
+.logout-icon {
+  position: absolute;
+  display: block;
+  color: white;
+}
+.my-cart-btn,
+.my-account-btn,
+.logout-btn {
+  width: 10%;
+  text-align: center;
+  padding-left: 25px;
+  font-size: 22px;
+  border: rgb(46, 48, 47) solid;
+  background-color: rgb(75, 77, 75);
+  cursor: pointer;
+  color: white;
 }
 
-.add-to-cart-btn:hover{
-    background-color:rgb(79, 175, 151);
+.my-account-btn {
+  width: 12%;
 }
-.add-to-cart-btn:active {
-    background-color: white;
-    border: 2px solid rgb(79, 175, 151);
+.my-cart,
+.my-account {
+  padding-left: 25px;
+}
+
+
+.my-cart-btn:hover,
+.my-account-btn:hover,
+.logout-btn:hover{
+    background-color: rgb(48, 49, 48);
+}
+
+.my-cart-btn:active,
+.my-account-btn:active,
+.logout-btn:active{
+    background-color: rgb(191, 196, 191);
     color: black;
 }
 
-
-h3{
-    font-size: 25px;
+.row {
+  display: flex;
+  flex-wrap: wrap;
 }
 
-.price{
-    font-size: 22px;
-    padding: 3px;
+.small {
+  height: 200px;
+  width: 250px;
+}
+
+.product-name {
+  border: 3px solid rgb(76, 159, 236);
+  font-size: 25px;
+  padding: 10px;
+  border-radius: 6px;
+  background-color: rgb(76, 159, 236);
+}
+
+.row-items {
+    background-color: white;
+  padding: 10px;
+  border: none;
+  margin: 10px;
+  margin-left: 40px;
+  height: auto;
+  width: auto;
+  box-shadow: 2px 2px 2px 2px rgb(133, 132, 132);
+}
+
+.add-to-cart-btn {
+  width: 100%;
+  background-color: rgb(145, 214, 197);
+  border: rgb(145, 214, 197);
+  padding: 6px;
+  border-radius: 6px;
+  color: white;
+  cursor: pointer;
+}
+
+.add-to-cart-btn:hover {
+  background-color: rgb(79, 175, 151);
+}
+.add-to-cart-btn:active {
+  background-color: white;
+  border: 2px solid rgb(79, 175, 151);
+  color: black;
+}
+
+h3 {
+  font-size: 25px;
+}
+
+.price {
+  font-size: 22px;
+  padding: 3px;
 }

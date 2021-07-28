@@ -10,7 +10,7 @@ function Beverages({beveragesproducts, onAdd}) {
         <h3>{beveragesproducts.name}</h3>
         <div className = "price">Rs. {beveragesproducts.price}</div>
         <div>
-            <button className = "add-to-cart-btn" onClick = {onAdd}> Add to Cart</button>
+            <button className = "add-to-cart-btn" onClick = {() => onAdd(beveragesproducts)}> Add to Cart</button>
         </div>
     </div>
     )

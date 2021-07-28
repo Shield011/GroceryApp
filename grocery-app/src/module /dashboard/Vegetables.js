@@ -4,7 +4,6 @@ import "./Dashboard.css";
 
 
 function Vegetables({vegetablesproducts, onAdd}) {
-   
 
     
     
@@ -15,7 +14,7 @@ function Vegetables({vegetablesproducts, onAdd}) {
             <h3>{vegetablesproducts.name}</h3>
             <div className = "price">Rs. {vegetablesproducts.price}</div>
             <div>
-                <button className = "add-to-cart-btn"onClick = {onAdd} > Add to Cart</button>
+                <button className = "add-to-cart-btn" onClick = {() => onAdd(vegetablesproducts)}> Add to Cart</button>
             </div>
         </div>
     )
