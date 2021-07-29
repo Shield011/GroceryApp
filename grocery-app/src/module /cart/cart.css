@@ -10,3 +10,153 @@ h2{
     color: grey;
     text-align: center;
 }
+
+.item-list{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    border: none;
+    margin: 12px;
+    box-shadow: 2px 2px 2px 2px rgb(158, 158, 158);
+
+}
+
+.item-image{
+    height: 100px;
+    width: 100px;
+    margin: 0;
+}
+
+.list{
+    padding: 10px;
+}
+
+.item-name, .item-price, .item-qty {
+    text-align: center;
+    justify-content: center;
+    padding: 10px;
+    margin: 12px;
+    margin-top: 35px;
+
+}
+
+.item-name{
+    width: 35%;
+}
+
+.item-qty {
+    width:10%
+}
+
+.item-price{
+    width: 18%;
+}
+
+.remove-btn {
+    height: 50px;
+    padding: 12px;
+    width: 50px;
+    margin: 10px;
+    margin-top: 35px;
+    background-color: red;
+    border: none;
+    color: white;
+    border-radius: 8px;
+    cursor: pointer;
+    box-shadow: 2px 2px 2px 0.5px rgb(158, 158, 158);
+}
+.add-btn{
+    height: 50px;
+    padding: 12px;
+    width: 50px;
+    margin: 30px;
+    margin-left: 20px;
+    margin-top: 35px;
+    background-color: rgb(3, 220, 228);
+    border: none;
+    color: white;
+    border-radius: 8px;
+    cursor: pointer;
+    box-shadow: 2px 2px 2px 0.5px rgb(158, 158, 158);
+
+}
+
+.add-btn:hover{
+    background-color: rgb(3, 171, 177);
+    
+
+}
+
+.add-btn:active{
+    background-color: white;
+    border: 2px solid rgb(3, 171, 177);
+    color: black;
+
+}
+
+.remove-btn:hover{
+    background-color: rgb(180, 0, 0);
+}
+
+.remove-btn:active{
+    background-color: white;
+    border: 2px solid red;
+    color: black;
+}
+
+.checkout-btn{
+    margin: 25px;
+    width: 95%;
+    padding: 10px;
+    font-size: 25px;
+    background-color: rgb(130, 214, 4);
+    border: none;
+    color: white;
+    cursor: pointer;
+    box-shadow: 2px 2px 2px 0.5px rgb(158, 158, 158);
+
+}
+
+.checkout-btn:hover{
+    background-color: rgb(102, 170, 0);
+}
+
+.checkout-btn:active{
+    background-color: white;
+    color: black;
+    border: 2px solid rgb(102, 170, 0)
+
+}
+ .bill{
+    padding: 5px;
+    margin: 5px;
+    display: flex;
+    flex-direction: row;
+     
+
+}
+
+.total{
+    font-size: 30px;
+    font-weight: bold;
+    padding: 10px;
+    width: 82%;
+} 
+
+.total-price{
+    font-size: 30px;
+    font-weight: bold;
+    padding: 10px;
+    width: 20%;
+    
+}
+.prices{
+    width: 16%;
+}
+
+.items{
+    width: 85%;
+    padding: 12px;
+
+}
+

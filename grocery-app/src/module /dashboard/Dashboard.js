@@ -7,6 +7,10 @@ import Snacks from "./Snacks";
 import Beverages from "./Beverages";
 import Cooking from "./Cooking";
 import Bathroom from "./Bathroom";
+import Chocolates from "./Chocolates";
+import Household from "./Household";
+import HouseholdData from "../../common/HouseholdData";
+import ChocolatesData from "../../common/ChocolatesData";
 import CookingData from "../../common/CookingData";
 import BathroomData from "../../common/BathroomData";
 import VegetablesData from "../../common/VegetablesData";
@@ -20,8 +24,6 @@ import { IoMdCart } from "react-icons/io";
 import { BsSearch } from "react-icons/bs";
 import { BiUserCircle } from "react-icons/bi";
 import { GrLogout } from "react-icons/gr";
-// import orderdeliever from "../../assets/img/orderdeliever.jpg"
-// import freshfoodadd from "../../assets/img/freshfoodadd.jpg";
 
 function Dashboard() {
   const { vegetablesproducts } = VegetablesData;
@@ -30,13 +32,43 @@ function Dashboard() {
   const { beveragesproducts } = BeveragesData;
   const {cookingproducts} = CookingData;
   const {bathroomproducts} = BathroomData;
+  const {householdproducts} = HouseholdData;
+  const {chocolatesproducts} = ChocolatesData;
 
   const [cartItems, setCartItems] = useState([]);
 
   const onAdd = (product) => {
     console.log("yo");
-    setCartItems([...cartItems, product]);
+    const exist = cartItems.find((x) => x.id === product.id);
+    if (exist) {
+      setCartItems(
+        cartItems.map((x) =>
+          x.id === product.id ? { ...exist, qty: exist.qty + 1 } : x
+        )
+      );
+    } else {
+      setCartItems([...cartItems, { ...product, qty: 1 }]);
+    }
   };
+    
+  const onDelete = (product) => {
+    const exist = cartItems.find((x) => x.id === product.id);
+    if (exist.qty === 1) {
+      setCartItems(cartItems.filter((x) => x.id !== product.id));
+    } else {
+      setCartItems(
+        cartItems.map((x) =>
+          x.id === product.id ? { ...exist, qty: exist.qty - 1 } : x
+        )
+      );
+    }
+  };
+
+
+ 
+ 
+
+ 
 
   const logoutHandler = () => {
     alert("You will be logged out.");
@@ -74,10 +106,10 @@ function Dashboard() {
         </button>
       </header>
 
-      <div className="Ad">{/* <img src = {orderdeliever}></img> */}</div>
+   
       <Navigation />
       <br />
-      <main className="block col-2">
+      <main className="product-list">
         <div className="row">
           {vegetablesproducts.map((vegetablesproducts) => (
             <Vegetables
@@ -138,8 +170,32 @@ function Dashboard() {
             ></Bathroom>
           ))}
         </div>
+        <div className="row">
+          {householdproducts.map((householdproducts) => (
+            <Household
+              cartItems={cartItems}
+              setCartItems={setCartItems}
+              key={householdproducts.id}
+              householdproducts={householdproducts}
+              onAdd={onAdd}
+            ></Household>
+          ))}
+        </div>
+        <div className="row">
+          {chocolatesproducts.map((chocolatesproducts) => (
+            <Chocolates
+              cartItems={cartItems}
+              setCartItems={setCartItems}
+              key={chocolatesproducts.id}
+              chocolatesproducts={chocolatesproducts}
+              onAdd={onAdd}
+            ></Chocolates>
+          ))}
+        </div>
+        
+        
       </main>
-      <Cart cartItems={cartItems} />
+      <Cart cartItems={cartItems} onAdd = {onAdd} onDelete = {onDelete} />
       <User />
     </div>
   );
