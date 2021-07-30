@@ -70,7 +70,7 @@ h2{
     padding: 12px;
     width: 50px;
     margin: 30px;
-    margin-left: 20px;
+    margin-left: 10%;
     margin-top: 35px;
     background-color: rgb(3, 220, 228);
     border: none;
@@ -132,6 +132,7 @@ h2{
     margin: 5px;
     display: flex;
     flex-direction: row;
+    margin-left: 20px;
      
 
 }
@@ -140,8 +141,8 @@ h2{
     font-size: 30px;
     font-weight: bold;
     padding: 10px;
-    width: 82%;
-} 
+    width: 100%;
+}
 
 .total-price{
     font-size: 30px;
@@ -155,7 +156,7 @@ h2{
 }
 
 .items{
-    width: 85%;
+    width: 90%;
     padding: 12px;
 
 }

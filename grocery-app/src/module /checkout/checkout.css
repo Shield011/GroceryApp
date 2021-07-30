@@ -23,7 +23,28 @@
 }
 
 .checkout-btn {
-  width: 97%;
+  width: 96.5%;
   margin: 30px;
   margin-left: 35px;
+}
+
+.order-received{
+    font-size: 40px;
+
+}
+
+.delivered-soon{
+    font-size: 30px;
+
+
+}
+
+
+.endpage{
+    margin-top: 20%;
+    text-align: center;
+}
+
+.done-icon{
+    color: green;
 }

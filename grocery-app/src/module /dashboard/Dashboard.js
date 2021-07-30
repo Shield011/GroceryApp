@@ -24,18 +24,20 @@ import { IoMdCart } from "react-icons/io";
 import { BsSearch } from "react-icons/bs";
 import { BiUserCircle } from "react-icons/bi";
 import { GrLogout } from "react-icons/gr";
+import Checkout from "../checkout/Checkout";
 
 function Dashboard() {
   const { vegetablesproducts } = VegetablesData;
   const { fruitsproducts } = FruitsData;
   const { snacksproducts } = SnacksData;
   const { beveragesproducts } = BeveragesData;
-  const {cookingproducts} = CookingData;
-  const {bathroomproducts} = BathroomData;
-  const {householdproducts} = HouseholdData;
-  const {chocolatesproducts} = ChocolatesData;
+  const { cookingproducts } = CookingData;
+  const { bathroomproducts } = BathroomData;
+  const { householdproducts } = HouseholdData;
+  const { chocolatesproducts } = ChocolatesData;
 
   const [cartItems, setCartItems] = useState([]);
+  const [search, setSearch] = useState();
 
   const onAdd = (product) => {
     console.log("yo");
@@ -50,7 +52,7 @@ function Dashboard() {
       setCartItems([...cartItems, { ...product, qty: 1 }]);
     }
   };
-    
+
   const onDelete = (product) => {
     const exist = cartItems.find((x) => x.id === product.id);
     if (exist.qty === 1) {
@@ -64,11 +66,7 @@ function Dashboard() {
     }
   };
 
-
- 
- 
-
- 
+  const onSearch = () => {};
 
   const logoutHandler = () => {
     alert("You will be logged out.");
@@ -94,7 +92,13 @@ function Dashboard() {
           {" "}
           <BiUserCircle className="account-icon" size="1.5em" />
           <span className="my-account">My Account</span>
+          <div className="account-content">
+            <a href="#">Account info</a>
+            <a href="#">My cart</a>
+            <a href="#">My orders</a>
+          </div>
         </button>
+
         <button className="my-cart-btn">
           {" "}
           <IoMdCart className="cart-icon" size="1.5em" />{" "}
@@ -106,7 +110,6 @@ function Dashboard() {
         </button>
       </header>
 
-   
       <Navigation />
       <br />
       <main className="product-list">
@@ -192,11 +195,10 @@ function Dashboard() {
             ></Chocolates>
           ))}
         </div>
-        
-        
       </main>
-      <Cart cartItems={cartItems} onAdd = {onAdd} onDelete = {onDelete} />
+      <Cart cartItems={cartItems} onAdd={onAdd} onDelete={onDelete} />
       <User />
+      <Checkout />
     </div>
   );
 }
