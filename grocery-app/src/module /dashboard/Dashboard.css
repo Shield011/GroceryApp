@@ -6,8 +6,8 @@
   background-color: rgb(75, 77, 75);
   border: 2px solid black;
 }
-.product-list{
-    background-color: rgb(240, 240, 240);
+.product-list {
+  background-color: rgb(240, 240, 240);
 }
 .dashboard-heading {
   font-size: 20px;
@@ -41,6 +41,7 @@
   padding: 10px;
   margin: 8px;
   width: 40%;
+  margin-right: 0px;
 }
 
 .cart-icon,
@@ -71,18 +72,17 @@
   padding-left: 25px;
 }
 
-
 .my-cart-btn:hover,
 .my-account-btn:hover,
-.logout-btn:hover{
-    background-color: rgb(48, 49, 48);
+.logout-btn:hover {
+  background-color: rgb(48, 49, 48);
 }
 
 .my-cart-btn:active,
 .my-account-btn:active,
-.logout-btn:active{
-    background-color: rgb(191, 196, 191);
-    color: black;
+.logout-btn:active {
+  background-color: rgb(191, 196, 191);
+  color: black;
 }
 
 .row {
@@ -145,4 +145,28 @@ h3 {
   padding: 3px;
   margin: 8px;
   width: 40%;
+}
+
+.account-content {
+  display: none;
+  position: absolute;
+  background-color: #f1f1f1;
+  min-width: 160px;
+  box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+  z-index: 1;
+}
+
+.account-content a {
+  color: black;
+  padding: 12px 16px;
+  text-decoration: none;
+  display: block;
+}
+
+.account-content a:hover {
+  background-color: #ddd;
+}
+
+.my-account:hover .account-content {
+  display: block;
 }

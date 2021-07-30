@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import "./checkout.css";
+import Endpage from "./Endpage";
 
 function Checkout() {
   const [fullname, setFullName] = useState();
@@ -122,6 +123,7 @@ function Checkout() {
         {" "}
         Continue to Checkout{" "}
       </button>
+      <Endpage />
     </div>
   );
 }

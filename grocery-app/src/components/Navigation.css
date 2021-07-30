@@ -1,91 +1,79 @@
-.shop-by-category{
-    width: 98.7%;
-    border: 2px solid rgb(179, 231, 240);
-    padding: 10px;
-    margin-top: 10px;
-    background-color: rgb(179, 231, 240);
-    
+.shop-by-category {
+  width: 98.7%;
+  border: 2px solid rgb(179, 231, 240);
+  padding: 10px;
+  margin-top: 10px;
+  background-color: rgb(179, 231, 240);
 }
-.shop-by-category-span{
-    font-size: 30px;
-    
+.shop-by-category-span {
+  font-size: 30px;
 }
 
-.row-wise{
-    display: flex;
-    flex-direction: row;
-    margin: 30px;
-    margin-top:0;
-
+.row-wise {
+  display: flex;
+  flex-direction: row;
+  margin: 30px;
+  margin-top: 0;
 }
 
-.row-wise-display{
-    padding: 15px;
-    
-   
-    text-align: center;
-    cursor: pointer;
-    /* height: auto; */
-    width: 200px;
+.row-wise-display {
+  padding: 15px;
+
+  text-align: center;
+  cursor: pointer;
+
+  width: 200px;
 }
 
-.row-wise-display:hover{
-    background-color: rgb(216, 211, 211);
-    
+.row-wise-display:hover {
+  background-color: rgb(216, 211, 211);
 }
 
-.row-img{
-    border-radius: 50%;
-    height: 60px;
-    width: 80px;
-
+.row-img {
+  border-radius: 50%;
+  height: 60px;
+  width: 80px;
 }
 
-.ad-container{
-    width: 100%;
-    background-color: rgb(191, 233, 151);
+.ad-container {
+  width: 100%;
+  background-color: rgb(191, 233, 151);
 }
 
-.category{
-    display: flex;
-    flex-direction: row;
-    flex-wrap: wrap;
-    border: none;
-    background-color: rgb(197, 232, 238);
-    
-
-
+.category {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  border: none;
+  background-color: rgb(197, 232, 238);
 }
 
-.category-img{
-    border-radius: 50%;
-    height: 150px;
-    width: 180px;
+.category-img {
+  border-radius: 50%;
+  height: 150px;
+  width: 180px;
 }
 
-.category-card{
-    padding: 12px;
-    border: none;
-    box-shadow: 2px 2px 2px 2px rgb(133, 132, 132);
-    margin: 20px;
-    display: flex;
-    flex-direction: row;
-    width: 500px;
-    height: auto;
-    cursor: pointer;
-    border-radius: 8px;
-    background-color: rgb(172, 238, 238);
-    
-
+.category-card {
+  padding: 12px;
+  border: none;
+  box-shadow: 2px 2px 2px 2px rgb(133, 132, 132);
+  margin: 20px;
+  display: flex;
+  flex-direction: row;
+  width: 500px;
+  height: auto;
+  cursor: pointer;
+  border-radius: 8px;
+  background-color: rgb(172, 238, 238);
 }
 
-.img-description{
-    font-size: 25px;
-    padding: 60px;
-    margin: 20px;
+.img-description {
+  font-size: 25px;
+  padding: 60px;
+  margin: 20px;
 }
 
-.category-card:hover{
-    background-color:  rgb(146, 236, 236);;
-
+.category-card:hover {
+  background-color: rgb(146, 236, 236);
 }

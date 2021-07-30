@@ -17,6 +17,7 @@ function Routes() {
                     <Route exact path="/dashboard" component={Dashboard} />
                     <Route path="/all" component={Vegetables} />
                     <Route path="/fruits" component={Fruits} />
+                    
                    
                 </Switch>
             </Router>
