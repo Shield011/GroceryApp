@@ -5,7 +5,7 @@ function User() {
     return (
         <div>
             <p className = "myaccount"> My Account</p>
-            <p className = "username">Name : </p>
+            <p className = "username">Name :  </p>
         </div>
     )
 }
