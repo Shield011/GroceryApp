@@ -1,28 +1,16 @@
-.shop-by-category {
-  width: 98.7%;
-  border: 2px solid rgb(179, 231, 240);
-  padding: 10px;
-  margin-top: 10px;
-  background-color: rgb(179, 231, 240);
-}
-.shop-by-category-span {
-  font-size: 30px;
-}
-
 .row-wise {
   display: flex;
   flex-direction: row;
-  margin: 30px;
+  flex-wrap: wrap;
+  margin: 10px;
   margin-top: 0;
 }
 
 .row-wise-display {
   padding: 15px;
-
   text-align: center;
   cursor: pointer;
-
-  width: 200px;
+  width: 190px;
 }
 
 .row-wise-display:hover {
@@ -35,45 +23,150 @@
   width: 80px;
 }
 
-.ad-container {
-  width: 100%;
-  background-color: rgb(191, 233, 151);
-}
-
-.category {
+.header {
   display: flex;
   flex-direction: row;
-  flex-wrap: wrap;
-  border: none;
-  background-color: rgb(197, 232, 238);
+  height: 70px;
+  width: 99.8%;
+  background-color: rgb(75, 77, 75);
+  border: 2px solid black;
 }
 
-.category-img {
-  border-radius: 50%;
-  height: 150px;
+.link-to {
+  text-decoration: none;
+  color: black;
+}
+
+.dashboard-btn {
+  font-size: 20px;
+  font-weight: bold;
+  border: rgb(46, 48, 47) solid;
+  padding: 14px;
+  padding-top: 10px;
+  background-color: rgb(75, 77, 75);
+  padding-left: 14px;
   width: 180px;
-}
-
-.category-card {
-  padding: 12px;
-  border: none;
-  box-shadow: 2px 2px 2px 2px rgb(133, 132, 132);
-  margin: 20px;
-  display: flex;
-  flex-direction: row;
-  width: 500px;
-  height: auto;
+  height: 70px;
+  color: white;
+  text-align: center;
   cursor: pointer;
-  border-radius: 8px;
-  background-color: rgb(172, 238, 238);
 }
 
-.img-description {
-  font-size: 25px;
-  padding: 60px;
-  margin: 20px;
+.search-form {
+  width: 70%;
+  background-color: rgb(75, 77, 75);
+  border: rgb(46, 48, 47) solid;
+  text-align: center;
 }
 
-.category-card:hover {
-  background-color: rgb(146, 236, 236);
+.search-btn {
+  padding: 12px;
+  background-color: rgb(114, 117, 115);
+  border: none;
+  color: white;
+  width: 10%;
+}
+
+.search-input {
+  padding: 10px;
+  margin: 8px;
+  width: 40%;
+  margin-right: 0px;
+}
+
+
+.linked{
+  text-decoration:none;
+  color: white;
+}
+
+.my-cart-btn{
+  padding: 15px;
+  color: white;
+  width: 10%;
+  text-align: center;
+  text-decoration: none;
+  background-color: transparent;
+  border: rgb(46, 48, 47) solid;
+
+}
+
+ button.my-cart-btn, button.logout-btn{
+  width: 180px;
+  height: 70px;
+  
+}
+
+button.my-account-btn{
+  width: 200px;
+  height: 70px;
+}
+
+.logout-btn{
+  padding: 15px;
+  color: white;
+  width: auto;
+  text-align: center;
+  text-decoration: none;
+  background-color: transparent;
+  
+}
+
+.mycart, .logout{
+  color: white;
+  margin-left: 20px;
+  
+}
+
+.my-account{
+  margin-left: 10px;
+  margin-right: 10px;
+}
+
+.cart-icon{
+  margin-right: 20px;
+
+}
+
+.cart-icon,
+.account-icon,
+.logout-icon {
+  position: absolute;
+  display: block;
+  color: white;
+}
+
+.my-account-btn,
+.logout-btn {
+  width: 10%;
+  text-align: center;
+  padding-left: 25px;
+  font-size: 22px;
+  border: rgb(46, 48, 47) solid;
+  background-color: rgb(75, 77, 75);
+  cursor: pointer;
+  color: white;
+}
+
+.my-account-btn {
+  width: 12%;
+}
+.my-cart,
+.my-account {
+  padding-left: 25px;
+}
+
+.my-cart-btn:hover,
+.my-account-btn:hover,
+.logout-btn:hover, 
+.dashboard-btn:hover{
+  background-color: rgb(48, 49, 48);
+}
+
+.my-cart-btn:active,
+.my-account-btn:active,
+.logout-btn:active,
+.dashboard-btn:active {
+  background-color: rgb(191, 196, 191);
+  color: black;
 }

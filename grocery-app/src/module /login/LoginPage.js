@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import history from "../../history";
+import { Link } from "react-router-dom";
 import "./LoginPage.css";
 
 import question from "../../assets/img/question.png";
@@ -22,7 +22,7 @@ function Forms() {
       id: Math.floor(Math.random() * 10000),
     };
     localStorage.setItem("loginData", JSON.stringify(loginCredentials));
-    history.push("/dashboard");
+    
     console.log("clicked");
     setUsername("");
     setPassword("");
@@ -30,7 +30,7 @@ function Forms() {
 
   return (
     <div className="logIn">
-      <h1 className="page-heading">Welcome!</h1>
+      <h1 className="page-heading"></h1>
       <form className="login-form">
         <img src={question} alt="user"></img>
         <br />
@@ -55,9 +55,11 @@ function Forms() {
           onChange={onPasswordChange}
         />
         <br></br>
+        <Link to = "/dashboard">
         <button className="login-button" onClick={clickHandlerLogin}>
           Log In
         </button>
+        </Link>
       </form>
       <br />
       <br />

@@ -1,7 +1,9 @@
 import React, { useState } from "react";
+import { Link } from "react-router-dom";
 import "./cart.css";
 import { AiTwotoneDelete } from "react-icons/ai";
 import { FaPlus } from "react-icons/fa";
+import Navigation from "../../components/Navigation";
 
 function Cart({ cartItems, onAdd, onDelete }) {
   const itemsPrice = cartItems.reduce((a, c) => a + c.qty * c.price, 0);
@@ -10,7 +12,8 @@ function Cart({ cartItems, onAdd, onDelete }) {
   const totalPrice = itemsPrice + taxPrice + shippingPrice;
 
   return (
-    <>
+    <> 
+      <Navigation />
       <h2> Cart Items</h2>
 
       {cartItems.length === 0 && (
@@ -58,7 +61,9 @@ function Cart({ cartItems, onAdd, onDelete }) {
             <div className="total-price">Rs. {totalPrice.toFixed(2)}</div>
           </div>
           <hr />
+          <Link to = "/checkout">
           <button className="checkout-btn">Checkout</button>
+          </Link>
         </>
       )}
     </>

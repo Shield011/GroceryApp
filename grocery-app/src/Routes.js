@@ -14,10 +14,10 @@ function Routes() {
              <Router history={history}>
                 <Switch>
                     <Route exact path="/"  component={LoginPage} />
-                    <Route exact path="/dashboard" component={Dashboard} />
+                    <Route exact path="/dashboard" module={Dashboard} />
                     <Route path="/all" component={Vegetables} />
                     <Route path="/fruits" component={Fruits} />
-                    
+
                    
                 </Switch>
             </Router>

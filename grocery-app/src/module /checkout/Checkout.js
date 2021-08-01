@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import "./checkout.css";
-import Endpage from "./Endpage";
+import Link from "react";
+
 
 function Checkout() {
   const [fullname, setFullName] = useState();
@@ -119,11 +120,13 @@ function Checkout() {
         </div>
       </form>
 
+      <Link to = "/endpage">
       <button className="checkout-btn" onClick={checkoutHandler}>
         {" "}
         Continue to Checkout{" "}
       </button>
-      <Endpage />
+      </Link>
+     
     </div>
   );
 }
