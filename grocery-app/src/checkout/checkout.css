@@ -1,0 +1,64 @@
+.billing-detalis {
+  margin: 10px;
+  width: 100%;
+  font-size: 30px;
+}
+
+.order-received {
+  font-size: 40px;
+}
+
+.delivered-soon {
+  font-size: 30px;
+}
+
+.endpage {
+  margin-top: 20%;
+  text-align: center;
+}
+
+.done-icon {
+  color: green;
+}
+
+.continue-shopping {
+  width: 300px;
+  height: 50px;
+  margin: 20px;
+  background-color: rgb(76, 176, 235);
+  color: white;
+  font-size: 25px;
+  padding: 10px;
+  border: none;
+}
+
+.continue-shopping:hover {
+  background-color: rgb(55, 161, 223);
+}
+
+.continue-shopping:active {
+  background-color: white;
+  color: black;
+  border: rgb(55, 161, 223) 2px solid;
+}
+
+.exit {
+  width: 200px;
+  height: 50px;
+  margin: 20px;
+  background-color: rgb(236, 96, 53);
+  color: white;
+  font-size: 25px;
+  padding: 10px;
+  border: none;
+}
+
+.exit:hover {
+  background-color: rgb(224, 71, 33) 2px;
+}
+
+.exit:active {
+  background-color: white;
+  color: black;
+  border: rgb(224, 71, 33) 2px solid;
+}

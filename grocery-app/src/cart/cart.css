@@ -1,0 +1,134 @@
+
+.cart-image {
+  height: 80px;
+  width: 100px;
+}
+
+.decrement-btn,
+.increment-btn,
+.remove-item-btn {
+  padding: 5px;
+  margin: 5px;
+  border: none;
+  background-color: transparent;
+  margin: 10px;
+}
+
+.decrement-btn {
+  color: blue;
+  border: 2px solid blue;
+  width: 35px;
+}
+
+.increment-btn {
+  color: greenyellow;
+  border: 2px solid greenyellow;
+  width: 35px;
+}
+.remove-item-btn {
+  color: tomato;
+  border: 2px solid tomato;
+  width: 35px;
+}
+
+.cart-container {
+  box-shadow: 1px 1px 1px 1px rgb(218, 218, 218);
+  padding: 10px;
+  margin: 10px;
+}
+
+.remove-item-btn:hover {
+  background-color: rgb(236, 166, 154);
+}
+
+.decrement-btn:hover {
+  background-color: rgb(189, 189, 247);
+}
+
+.increment-btn:hover {
+  background: rgb(228, 247, 200);
+}
+
+.cart-item-name,
+.cart-item-price,
+.cart-item-qty,
+.cart-item-total {
+  font-size: 20px;
+}
+
+.clear-cart-btn {
+  margin-left: 1560px;
+  margin-top: 10px;
+  width: 200px;
+  padding: 8px;
+  background-color: red;
+  border: none;
+  color: white;
+  margin-bottom: 20px;
+}
+
+.clear-cart-btn:hover {
+  background-color: white;
+  color: red;
+  border: 1px solid red;
+}
+
+.clear-cart-btn:active {
+  background-color: red;
+  border: none;
+  color: white;
+}
+.cart-checkout-btn {
+  width: 98%;
+  padding: 8px;
+  margin: 20px;
+
+  background-color: rgb(146, 218, 39);
+  font-size: 20px;
+  border: none;
+  border-radius: 6px;
+}
+
+.cart-checkout-btn:hover {
+  background-color: rgb(124, 182, 37);
+}
+
+.cart-checkout-btn:active {
+  background-color: white;
+  border: 2px solid rgb(124, 182, 37);
+}
+
+.subtotal,
+.carttax,
+.shipping,
+.carttotal {
+  text-align: right;
+  margin-left: 85%;
+  font-size: 22px;
+}
+
+.carttotal {
+  font-weight: bold;
+}
+
+.start-shopping {
+  width: 30%;
+  margin-top: 20px;
+  text-align: center;
+  margin-left: 35%;
+  background-color: rgb(97, 235, 104);
+  border: none;
+  color: black;
+  font-size: 20px;
+  padding: 8px;
+}
+.empty-cart {
+  margin-top: 20%;
+  color: grey;
+}
+.start-shopping:hover{
+  background-color: white;
+  border:2px solid rgb(97, 235, 104);
+  color: black;
+}
+

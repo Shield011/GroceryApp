@@ -1,0 +1,48 @@
+.row-item {
+  width: 300px;
+  height: 370px;
+  padding: 20px;
+  margin: 20px;
+  box-shadow: 1px 1px 1px 1px rgb(177, 175, 175);
+  background-color: white;
+  
+}
+
+.row-display{
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  background-color: whitesmoke;
+ 
+}
+.small {
+  height: 200px;
+  width: 250px;
+}
+
+.cart-btn {
+  padding: 5px;
+  width: 100%;
+  border-radius: 8px;
+  background-color: rgb(138, 230, 101);
+  border: none;
+  font-weight: bold;
+  font-size: 23px;
+}
+
+.product-name {
+  padding-top: 8px;
+}
+
+.product-price {
+  font-size: 20px;
+}
+
+.cart-btn:hover {
+  background-color: rgb(80, 204, 32);
+}
+
+.cart-btn:active {
+  background-color: white;
+  border: 2px solid rgb(80, 204, 32);
+}

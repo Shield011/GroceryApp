@@ -1,0 +1,61 @@
+.profile{
+    padding: 20px;
+    height: 950px;
+    text-align: center;
+    background-color: cornsilk;
+}
+
+.profile-details{
+    margin-top: 20px;
+    background-color: rgb(247, 238, 206);
+    padding: 20px;
+    height: 100%;
+
+}
+
+.user-email, .user-pass{
+    padding: 5px;
+    font-size:30px;
+    color: grey;
+
+}
+
+.email-span, .pass-span{
+    font-weight: bold;
+    color: black;
+
+}
+
+.user-logout-btn{
+    padding:10px;
+    margin: 20px;
+    width: 10%;
+    font-size: 18px;
+    background-color: tomato;
+    border: none;
+
+
+}
+
+.user-shopping-btn{
+    padding:10px;
+    margin: 20px;
+    width: 20%;
+    font-size: 18px;
+    background-color: greenyellow;
+    border: none;
+
+}
+
+.user-logout-btn:hover{
+    background-color: white;
+    color: tomato;
+    border: 1px solid tomato;
+}
+
+.user-shopping-btn:hover{
+    background-color: white;
+    color: greenyellow;
+    border: 1px solid greenyellow;
+
+}
