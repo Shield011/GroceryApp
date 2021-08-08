@@ -9,25 +9,18 @@ export default function profile() {
 
   return (
     <>
-      
       <div className="profile">
         <Title name="My" title="Account"></Title>
-        <div className = "profile-details">
-        <h3 className="user-email">
-          Email: <span className="email-span">{userEmail}</span>
-        </h3>
-        <h3 className="user-pass">
-          Password: <span className="pass-span">{userPass}</span>
-        </h3>
-        if (useEmail === 0 && userPass === 0) {
-          
-        }
-        <Link to = "/">
-        <button className = "user-logout-btn">Logout</button>
-        </Link>
-        <Link to ="/dashboard">
-        <button className = "user-shopping-btn">Continue Shopping</button>
-        </Link>
+        <div className="profile-details">
+          <h3 className="user-email">
+            Email: <span className="email-span">{userEmail}</span>
+          </h3>
+          <h3 className="user-pass">
+            Password: <span className="pass-span">{userPass}</span>
+          </h3>
+          <Link to="/dashboard">
+            <button className="user-shopping-btn">Continue Shopping</button>
+          </Link>
         </div>
       </div>
     </>

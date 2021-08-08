@@ -15,10 +15,6 @@ function Endpage() {
       <Link to="/dashboard">
         <button className="continue-shopping"> Continue Shopping</button>
       </Link>
-
-      <Link to="/login">
-        <button className="exit">Logout</button>
-      </Link>
     </div>
   );
 }

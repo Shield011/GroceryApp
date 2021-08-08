@@ -1,4 +1,4 @@
-.navigation{
+.navigation {
   background-color: rgb(33, 117, 156) !important;
 }
 
@@ -38,7 +38,6 @@
 }
 
 .my-cart,
-.account-btn,
 .logout-btn {
   background-color: transparent !important;
   color: white;
@@ -47,18 +46,20 @@
   font-size: 20px;
   border: none !important;
   box-shadow: none !important;
-  
 }
 
 .my-cart:hover,
-.account-btn:hover,
+.account-dropdown:hover,
 .logout-btn:hover {
   background-color: rgb(25, 104, 141) !important ;
   border: none !important;
   box-shadow: none !important;
 }
 
-
-.account-btn:active .dropdown-item{
-  display: block !important;
+.account-dropdown{
+  background-color: transparent !important;
+  border: none;
+  font-size: 20px;
+  padding: 10px;
 }
+

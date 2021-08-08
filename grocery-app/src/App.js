@@ -10,10 +10,12 @@ import Dashboard from "./dashboard/Dashboard";
 import Login from "./login/Login";
 import Profile from "./user/Profile";
 
+
 export default class App extends Component {
   render() {
     return (
       <div>
+       
         <Switch>
           <Route exact path="/" component={Login} />
           <Route path="/dashboard" component={Dashboard} />
@@ -22,6 +24,7 @@ export default class App extends Component {
           <Route path="/checkout" component={Checkout} />
           <Route path="/endpage" component={Endpage} />
           <Route path="/profile" component={Profile} />
+         
         </Switch>
       </div>
     );

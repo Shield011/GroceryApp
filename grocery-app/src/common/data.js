@@ -4,7 +4,7 @@ export const productData = [
         id: Math.floor(Math.random() * 100000),
         count: 0,
         total: 0,
-        category: "Vegetables",
+        category: "vegetables",
         name: "Cauliflower",
         price: 16,
         image:
@@ -14,7 +14,7 @@ export const productData = [
         id: Math.floor(Math.random() * 100000),
         count: 0,
         total: 0,
-        category: "Vegetables",
+        category: "vegetables",
         name: "Potato",
         price: 25,
         image:
@@ -24,7 +24,7 @@ export const productData = [
         id: Math.floor(Math.random() * 100000),
         count: 0,
         total: 0,
-        category: "Vegetables",
+        category: "vegetables",
         name: "Tomato",
         price: 20,
         image:
@@ -34,7 +34,7 @@ export const productData = [
         id: Math.floor(Math.random() * 100000),
         count: 0,
         total: 0,
-        category: "Vegetables",
+        category: "vegetables",
         name: "Onion",
         price: 40,
         image: "https://cartfull.in/wp-content/uploads/2021/06/Red-Onion.jpg",
@@ -43,7 +43,7 @@ export const productData = [
         id: Math.floor(Math.random() * 100000),
         count: 0,
         total: 0,
-        category: "Vegetables",
+        category: "vegetables",
         name: "LadyFinger",
         price: 25,
         image:
@@ -53,7 +53,7 @@ export const productData = [
         id: Math.floor(Math.random() * 100000),
         count: 0,
         total: 0,
-        category: "Vegetables",
+        category: "vegetables",
         name: "Cabbage",
         price: 20,
         image:
@@ -63,7 +63,7 @@ export const productData = [
         id: Math.floor(Math.random() * 100000),
         count: 0,
         total: 0,
-        category: "Vegetables",
+        category: "vegetables",
         name: "Brinjal",
         price: 15,
         image:
@@ -73,7 +73,7 @@ export const productData = [
         id: Math.floor(Math.random() * 100000),
         count: 0,
         total: 0,
-        category: "Vegetables",
+        category: "vegetables",
         name: "Capsicum",
         price: 40,
         image:
@@ -83,7 +83,7 @@ export const productData = [
         id: Math.floor(Math.random() * 100000),
         count: 0,
         total: 0,
-        category: "Vegetables",
+        category: "vegetables",
         name: "Garlic",
         price: 40,
         image: "https://images-na.ssl-images-amazon.com/images/I/31eUGitRN1L.jpg",
@@ -92,7 +92,7 @@ export const productData = [
         id: Math.floor(Math.random() * 100000),
         count: 0,
         total: 0,
-        category: "Vegetables",
+        category: "vegetables",
         name: "Green chilli",
         price: 10,
         image:

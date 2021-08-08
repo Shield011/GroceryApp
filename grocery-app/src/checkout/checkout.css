@@ -3,7 +3,33 @@
   width: 100%;
   font-size: 30px;
 }
+.checkout-form{
+  height: auto;
+  width: auto;;
+}
 
+.input-field{
+  margin:30px;
+  margin-top: 10px;
+  width: 95%;
+}
+
+.input-label{
+  margin:30px;
+  font-size: 20px;
+  margin-bottom: 8px;
+}
+
+.checkout-btn{
+  padding: 10px;
+  font-size: 20px;
+  background-color: greenyellow;
+  border: none;
+  width: 96%;
+  margin-left: 20px;
+  margin-right: 30px;
+  margin-top: 40px;
+}
 .order-received {
   font-size: 40px;
 }
@@ -28,7 +54,7 @@
   background-color: rgb(76, 176, 235);
   color: white;
   font-size: 25px;
-  padding: 10px;
+  padding: 8px;
   border: none;
 }
 
@@ -49,7 +75,7 @@
   background-color: rgb(236, 96, 53);
   color: white;
   font-size: 25px;
-  padding: 10px;
+  padding: 8px;
   border: none;
 }
 

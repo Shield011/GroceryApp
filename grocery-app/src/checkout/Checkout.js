@@ -56,7 +56,7 @@ function Checkout(props) {
     <div>
       <Title name = "Billing" title = "details" />
       
-      <form>
+      <form className = "checkout-form">
         <div className="billing-details">
           <label className="input-label">Full Name</label>
           <input
@@ -119,11 +119,11 @@ function Checkout(props) {
         </div>
       </form>
 
-      {/* <Link to = "/endpage"> */}
+   
       <button className="checkout-btn" onClick={checkoutHandler}>
         Continue to Checkout
       </button>
-      {/* </Link> */}
+     
     </div>
   );
 }

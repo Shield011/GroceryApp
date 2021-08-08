@@ -6,19 +6,9 @@ import "./product.css";
 
 export default class Product extends Component {
   render() {
-    
     const { id, name, price, image } = this.props.product;
     const userEmail = JSON.parse(localStorage.getItem("email"));
     const userPass = JSON.parse(localStorage.getItem("password"));
-
-    // const disableAddToCart = () => {
-    //   if (userEmail === 0 && userPass === 0) {
-    //     alert("You need to login first");
-    //     this.props.history.push("/");
-    //   } else {
-    //     value.addToCart(id)
-    //   }
-    // };
 
     return (
       <div className="row-display">
@@ -30,11 +20,11 @@ export default class Product extends Component {
                 <h3 className="product-name">{name}</h3>
                 <div className="product-price">Rs. {price}</div>
                 <button
-                  className="cart-btn" 
+                  className="cart-btn"
                   onClick={() => {
                     if (userEmail.length === 0 && userPass.length === 0) {
                       alert("You need to login first");
-                      <Link to ="/"></Link>
+                      <Link to="/"></Link>;
                     } else {
                       value.addToCart(id);
                     }

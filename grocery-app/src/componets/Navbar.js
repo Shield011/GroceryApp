@@ -12,15 +12,16 @@ import all from "../assests/all.png";
 import { FaShoppingCart } from "react-icons/fa";
 import { FaUserAlt } from "react-icons/fa";
 import { IoLogOut } from "react-icons/io5";
-import 'bootstrap/dist/css/bootstrap.css';
+import { ProductConsumer } from "../context/Context";
+import Dropdown from "react-bootstrap/Dropdown";
+import "bootstrap/dist/css/bootstrap.css";
 import "./navbar.css";
 
 export default class Navbar extends Component {
   render() {
-
-    const logoutHandler = () =>{
-      alert("You will be logged out")
-    }
+    const logoutHandler = () => {
+      alert("You will be logged out");
+    };
 
     return (
       <>
@@ -35,31 +36,26 @@ export default class Navbar extends Component {
               My Cart
             </button>
           </Link>
-         
-          <div className = "dropdown">
-          <button className="btn btn-secondary dropdown-toggle account-btn" type = "button" id="dropdownMenuButton1" data-bs-toggle="dropdown" aria-expanded="false">
-            {" "}
-            <FaUserAlt className="icons" size="1.2em" />
-              User
-          </button>
-          <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton1">
-          <Link to ="/profile">
-              <li><a class="dropdown-item" href="#">My Account</a></li>
-              </Link>
-              <Link to = "/">
-              <li><a class="dropdown-item" href="#">Login</a></li>
-              </Link>
-          </ul>
 
+          <div className="dropdown">
+            <Dropdown>
+              <Dropdown.Toggle className = "account-dropdown">
+                <FaUserAlt className="icons" size="1.2em" />
+                User
+              </Dropdown.Toggle>
+              <Dropdown.Menu>
+                <Dropdown.Item className ="dropdown-item" href="/profile">Account</Dropdown.Item>
+                <Dropdown.Item className ="dropdown-item" href="/">Login</Dropdown.Item>
+              </Dropdown.Menu>
+            </Dropdown>
           </div>
-          
-          
-          <Link to = "/">
-          <button className="logout-btn" onClick = {logoutHandler} >
-            {" "}
-            <IoLogOut className="icons" size="1.5em" />
-            Logout{" "}
-          </button>
+
+          <Link to="/">
+            <button className="logout-btn" onClick={logoutHandler}>
+              {" "}
+              <IoLogOut className="icons" size="1.5em" />
+              Logout{" "}
+            </button>
           </Link>
         </nav>
         <div className="row-wise">
@@ -71,13 +67,22 @@ export default class Navbar extends Component {
             </div>
           </Link>
 
-          <Link to="/vegetablesdisplay" className="link-to">
-            <div className="row-wise-display">
-              <img className="row-img" src={vegetables} alt="vegetables"></img>
-              <br />
-              <span className="row-img-description">Vegetables</span>
-            </div>
-          </Link>
+          <ProductConsumer>
+            {(value) => (
+              <div
+                className="row-wise-display"
+                onClick={() => value.filterByCategory("vegetables")}
+              >
+                <img
+                  className="row-img"
+                  src={vegetables}
+                  alt="vegetables"
+                ></img>
+                <br />
+                <span className="row-img-description">Vegetables</span>
+              </div>
+            )}
+          </ProductConsumer>
 
           <Link to="/fruitsdisplay" className="link-to">
             <div className="row-wise-display">
