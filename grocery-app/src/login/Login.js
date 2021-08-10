@@ -43,7 +43,7 @@ const Login = () => (
       return (
         <div className= "login-page">
         <form  className = "login-form" onSubmit={handleSubmit}>
-          <h1 className = "form-title">Login</h1>
+          <h1 className = "form-title" data-testid = "boxTitle">Login</h1>
           <label className = "form-label" htmlFor="email">Email</label>
           <input 
             name="email"
@@ -71,7 +71,7 @@ const Login = () => (
             <div className="input-feedback">{errors.password}</div>
           )}
           <Link to = "/dashboard">
-          <button className = "login-btn" type="submit" disabled={isSubmitting} onClick = {() => {
+          <button data-tesid = "login-btn" className = "login-btn" type="submit" disabled={isSubmitting} onClick = {() => {
             localStorage.setItem("email", JSON.stringify(values.email));
             localStorage.setItem("password", JSON.stringify(values.password));
 

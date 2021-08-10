@@ -7,7 +7,7 @@ import vegetables from "../assests/vegetables.jpg";
 import snacks from "../assests/snacks.jpg";
 import chocolates from "../assests/chocolates.jpg";
 import flour from "../assests/flour.jpg";
-import Navbar from "../componets/Navbar";
+import Navbar from "../components/Navbar";
 import "./dashboard.css";
 
 export default class Dashboard extends Component {

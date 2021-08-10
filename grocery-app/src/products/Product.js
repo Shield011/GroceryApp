@@ -6,17 +6,19 @@ import "./product.css";
 
 export default class Product extends Component {
   render() {
-    const { id, name, price, image } = this.props.product;
+    const { id, name, price, image, category } = this.props.product;
     const userEmail = JSON.parse(localStorage.getItem("email"));
     const userPass = JSON.parse(localStorage.getItem("password"));
 
     return (
-      <div className="row-display">
-        <div className="row-item">
+      
+      <div className="col-9 mx-auto col-md-7 col-lg-4 my-4">
+       
           <ProductConsumer>
             {(value) => (
-              <div className="row-container">
-                <img src={image} alt="product" className="small" />
+
+              <div className="card">
+                <img src={image} alt={name} className="card-img-top small" />
                 <h3 className="product-name">{name}</h3>
                 <div className="product-price">Rs. {price}</div>
                 <button
@@ -36,7 +38,7 @@ export default class Product extends Component {
             )}
           </ProductConsumer>
         </div>
-      </div>
+      
     );
   }
 }

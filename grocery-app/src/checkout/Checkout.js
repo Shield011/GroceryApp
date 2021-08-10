@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import Title from "../componets/Title";
+import Title from "../components/Title";
 import "./checkout.css";
 
 

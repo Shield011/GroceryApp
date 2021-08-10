@@ -1,5 +1,5 @@
 import React, { Component } from "react";
-import Title from "../componets/Title";
+import Title from "../components/Title";
 import EmptyCart from "./EmptyCart";
 import { ProductConsumer } from "../context/Context";
 import CartList from "./CartList";

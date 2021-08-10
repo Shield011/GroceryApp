@@ -4,7 +4,6 @@ import { productData } from "../common/data";
 const ProductContext = React.createContext();
 
 class ProductProvider extends Component {
-  
   state = {
     products: productData,
     cart: [],
@@ -19,11 +18,6 @@ class ProductProvider extends Component {
     const product = this.state.products.find((item) => item.id === id);
     return product;
   };
-
-  // getCategory = (category) => {
-  //   const product = this.state.products.find((item) => item.category === category);
-  //   return product;
-  // }
 
   addToCart = (id) => {
     let tempCart = [...this.state.cart];
@@ -67,7 +61,6 @@ class ProductProvider extends Component {
     }
   };
 
-  
   increment = (id) => {
     let tempCart = [...this.state.cart];
     const selectedProduct = tempCart.find((item) => item.id === id);
@@ -128,47 +121,19 @@ class ProductProvider extends Component {
   };
 
   filterByCategory = (category) => {
-    console.log("Clicked!!!");
-
-    let tempProducts = []
-    for (let i in productData) {
-
-      if (productData[i].category === category) {
-        tempProducts.push(i);
-        
-
+    let tempProducts = [...this.state.products];
+    let tempFilter = [];
+    for (let i in tempProducts) {
+      if (tempProducts[i].category === category) {
+        tempFilter.push(tempProducts[i]);
       }
-      console.log("i",productData[i].category);
-      
-       
-
-     
-             
+      this.setState(() => {
+        return {
+          filteredProducts: [...tempFilter],
+        };
+      });
     }
-
-    this.state.products = tempProducts;
-    console.log(this.state.products);
-    console.log("tempProducts", tempProducts)
-    console.log("data", productData);
-  
-
-
-
-    // let tempFilteredProducts = [...this.state.filteredProducts]
-    // tempFilteredProducts = tempFilteredProducts.filter((item) => item.category === category);
-    // const index = tempProducts.indexOf(this.getItem(id));
-    // let afterFilterProducts = tempProducts[index];
-    // this.setState (
-    //   () => {
-    //     return {
-    //       filteredProducts: [...tempFilteredProducts],
-    //       products: [...tempProducts],
-    //     }
-    //   }
-    // )
-
-  }
-
+  };
 
   clearCart = () => {
     this.setState(
@@ -208,7 +173,7 @@ class ProductProvider extends Component {
           increment: this.increment,
           decrement: this.decrement,
           clearCart: this.clearCart,
-          filterByCategory:this.filterByCategory
+          filterByCategory: this.filterByCategory,
         }}
       >
         {this.props.children}

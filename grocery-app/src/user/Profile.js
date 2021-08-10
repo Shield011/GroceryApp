@@ -1,6 +1,6 @@
 import React from "react";
 import { Link } from "react-router-dom";
-import Title from "../componets/Title";
+import Title from "../components/Title";
 import "./user.css";
 
 export default function profile() {

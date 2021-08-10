@@ -1,27 +1,22 @@
-.row-item {
-  width: 300px;
-  height: 370px;
-  padding: 20px;
-  margin: 20px;
-  box-shadow: 1px 1px 1px 1px rgb(177, 175, 175);
-  background-color: white;
-  
+.card {
+  height: 360px;
+  width: 280px;
+  box-shadow: 1px 1px 1px 1px rgb(224, 219, 219);
+  padding: 10px;
+  border: none;
 }
 
-.row-display{
-  display: flex;
-  flex-direction: row;
-  flex-wrap: wrap;
-  background-color: whitesmoke;
- 
-}
+
 .small {
-  height: 200px;
-  width: 250px;
+  margin: 8px;
+  height: 160px;
+  padding-right: 10px;
+  width: 200px;
 }
 
 .cart-btn {
   padding: 5px;
+  margin-top: auto;
   width: 100%;
   border-radius: 8px;
   background-color: rgb(138, 230, 101);
@@ -45,4 +40,15 @@
 .cart-btn:active {
   background-color: white;
   border: 2px solid rgb(80, 204, 32);
+}
+
+.navbar-link{
+  color: black;
+  text-decoration: none;
+}
+
+.navbar-link:hover{
+  color: black;
+  text-decoration: none;
+
 }
