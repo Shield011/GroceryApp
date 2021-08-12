@@ -50,6 +50,7 @@ function Checkout(props) {
     setState("");
     setCity("");
     setPincode("");
+  
   };
 
   return (
@@ -58,17 +59,17 @@ function Checkout(props) {
       
       <form className = "checkout-form">
         <div className="billing-details">
-          <label className="input-label">Full Name</label>
+          <label data-testid = "name-label" className="input-label">Full Name</label>
           <input
             className="input-field"
             type="text"
             value={fullname}
-            onchange={onFullNameChange}
+            onChange={onFullNameChange}
             placeholder="Enter your full name"
           ></input>
         </div>
         <div className="billing-details">
-          <label className="input-label">Email Id</label>
+          <label data-testid = "id-label" className="input-label">Email Id</label>
           <input
             className="input-field"
             type="text"
@@ -78,7 +79,7 @@ function Checkout(props) {
           ></input>
         </div>
         <div className="billing-details">
-          <label className="input-label address">Address</label>
+          <label data-testid = "address-label" className="input-label address">Address</label>
           <input
             className="input-field"
             type="text"
@@ -88,7 +89,7 @@ function Checkout(props) {
           ></input>
         </div>
         <div className="billing-details">
-          <label className="input-label">City</label>
+          <label data-testid = "city-label"  className="input-label">City</label>
           <input
             className="input-field"
             type="text"
@@ -98,7 +99,7 @@ function Checkout(props) {
           ></input>
         </div>
         <div className="billing-details">
-          <label className="input-label">State</label>
+          <label className="input-label" data-testid = "state-label" >State</label>
           <input
             className="input-field"
             type="text"
@@ -108,7 +109,7 @@ function Checkout(props) {
           ></input>
         </div>
         <div className="billing-details">
-          <label className="input-label">Pincode</label>
+          <label className="input-label" data-testid="pincode-label">Pincode</label>
           <input
             className="input-field"
             type="text"

@@ -5,7 +5,7 @@ import * as EmailValidator from "email-validator";
 import * as Yup from "yup";
 import "./login.css";
 
-const Login = () => (
+const Login = (props) => (
   <Formik
     initialValues={{ email: "", password: "" }}
     onSubmit={(values, { setSubmitting }) => {
@@ -44,7 +44,7 @@ const Login = () => (
         <div className= "login-page">
         <form  className = "login-form" onSubmit={handleSubmit}>
           <h1 className = "form-title" data-testid = "boxTitle">Login</h1>
-          <label className = "form-label" htmlFor="email">Email</label>
+          <label data-testid = "email-label" className = "form-label" htmlFor="email">Email</label>
           <input 
             name="email"
             type="text"
@@ -57,7 +57,7 @@ const Login = () => (
           {errors.email && touched.email && (
             <div className="input-feedback">{errors.email}</div>
           )}
-          <label className = "form-label" htmlFor="email">Password</label>
+          <label data-testid = "password-label" className = "form-label" htmlFor="email">Password</label>
           <input 
             name="password"
             type="password"
@@ -70,15 +70,16 @@ const Login = () => (
           {errors.password && touched.password && (
             <div className="input-feedback">{errors.password}</div>
           )}
-          <Link to = "/dashboard">
+          {/* <Link to = "/dashboard"> */}
           <button data-tesid = "login-btn" className = "login-btn" type="submit" disabled={isSubmitting} onClick = {() => {
             localStorage.setItem("email", JSON.stringify(values.email));
             localStorage.setItem("password", JSON.stringify(values.password));
+            props.history.push("/dashboard")
 
           }}>
             Login
           </button>
-          </Link>
+          {/* </Link> */}
         </form>
         </div>
       );

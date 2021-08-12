@@ -16,12 +16,12 @@ export default class Cart extends Component {
               return (
                 <React.Fragment>
                   <Title name="My" title="Cart" />;
-                  <CartList value={value} />
-                  <CartTotal value = {value} />
+                  <CartList props = {this.props} value={value} />
+                  <CartTotal props = {this.props} value = {value} />
                 </React.Fragment>
               );
             } else {
-              return <EmptyCart />;
+              return <EmptyCart props = {this.props}/>;
             }
           }}
         </ProductConsumer>

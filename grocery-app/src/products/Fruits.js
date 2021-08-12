@@ -10,7 +10,7 @@ export default class Vegetables extends Component {
     return (
       
       <React.Fragment>
-        <Navbar />
+        <Navbar props = {this.props}/>
         <div className = "py-5">
         <Title name = "Fruits" title = "products" />
         <div className = "container">

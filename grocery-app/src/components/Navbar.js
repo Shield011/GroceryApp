@@ -70,148 +70,150 @@ export default class Navbar extends Component {
               <span className="row-img-description">All</span>
             </div>
           </Link>
-          <Link to="/vegetables" className="navbar-link">
-            <ProductConsumer>
-              {(value) => (
-                <div
-                  className="row-wise-display"
-                  onClick={() => value.filterByCategory("vegetables")}
-                >
-                  <img
-                    className="row-img"
-                    src={vegetables}
-                    alt="vegetables"
-                  ></img>
-                  <br />
-                  <span className="row-img-description">Vegetables</span>
-                </div>
-              )}
-            </ProductConsumer>
-          </Link>
+          <ProductConsumer>
+            {(value) => (
+              <div
+                className="row-wise-display"
+                onClick={() => {
+                  console.log(this.props);
+                  this.props.props.history.push("/vegetables");
+                  value.filterByCategory("vegetables");
+                }}
+              >
+                <img
+                  className="row-img"
+                  src={vegetables}
+                  alt="vegetables"
+                ></img>
+                <br />
+                <span className="row-img-description">Vegetables</span>
+              </div>
+            )}
+          </ProductConsumer>
 
-          <Link to="/fruits" className="navbar-link">
-            <ProductConsumer>
-              {(value) => (
-                <div
-                  className="row-wise-display"
-                  onClick={() => value.filterByCategory("fruits")}
-                >
-                  <img className="row-img" src={fruits} alt="fruits"></img>
-                  <br />
-                  <span className="row-img-description">Fruits</span>
-                </div>
-              )}
-            </ProductConsumer>
-          </Link>
+          <ProductConsumer>
+            {(value) => (
+              <div
+                className="row-wise-display"
+                onClick={() => {
+                  this.props.props.history.push("/fruits");
 
-          <Link to="/cooking" className="navbar-link">
-            <ProductConsumer>
-              {(value) => (
-                <div
-                  className="row-wise-display"
-                  onClick={() => value.filterByCategory("cookingNeeds")}
-                >
-                  <img
-                    className="row-img"
-                    src={flour}
-                    alt="cooking Essentials"
-                  ></img>
-                  <br />
-                  <span className="row-img-description">
-                    Cooking Essentials
-                  </span>
-                </div>
-              )}
-            </ProductConsumer>
-          </Link>
-          <Link to="/snacks" className="navbar-link">
-            <ProductConsumer>
-              {(value) => (
-                <div
-                  className="row-wise-display"
-                  onClick={() => value.filterByCategory("snacks")}
-                >
-                  <img className="row-img" src={snacks} alt="snacks"></img>
-                  <br />
-                  <span className="row-img-description">Snacks</span>
-                </div>
-              )}
-            </ProductConsumer>
-          </Link>
-          <Link to="/household" className="navbar-link">
-            <ProductConsumer>
-              {(value) => (
-                <div
-                  className="row-wise-display"
-                  onClick={() => value.filterByCategory("dailyNeeds")}
-                >
-                  <img
-                    className="row-img"
-                    src={household}
-                    alt="household items"
-                  ></img>
-                  <br />
-                  <span className="row-img-description">Household Items</span>
-                </div>
-              )}
-            </ProductConsumer>
-          </Link>
-          <Link to="/bathroom" className="navbar-link">
-            <ProductConsumer>
-              {(value) => (
-                <div
-                  className="row-wise-display"
-                  onClick={() => value.filterByCategory("bathroomNeeds")}
-                >
-                  <img
-                    className="row-img"
-                    src={bathroomEssentials}
-                    alt="bathroom essentials"
-                  ></img>
-                  <br />
-                  <span className="row-img-description">
-                    Bathroom Essentials
-                  </span>
-                </div>
-              )}
-            </ProductConsumer>
-          </Link>
-          <Link to="/chocolates" className="navbar-link">
-            <ProductConsumer>
-              {(value) => (
-                <div
-                  className="row-wise-display"
-                  onClick={() => value.filterByCategory("chocolates")}
-                >
-                  <img
-                    className="row-img"
-                    src={chocolates}
-                    alt="chocolates"
-                  ></img>
-                  <br />
-                  <span className="row-img-description">Chocolates</span>
-                </div>
-              )}
-            </ProductConsumer>
-          </Link>
-          <Link to="/beverages" className="navbar-link">
-            <ProductConsumer>
-              {(value) => (
-                <div
-                  className="row-wise-display"
-                  onClick={() => value.filterByCategory("beverages")}
-                >
-                  <img
-                    className="row-img"
-                    src={beverages}
-                    alt="beverages"
-                  ></img>
-                  <br />
-                  <span className="row-img-description">Beverages</span>
-                </div>
-              )}
-            </ProductConsumer>
-          </Link>
+                  value.filterByCategory("fruits");
+                }}
+              >
+                <img className="row-img" src={fruits} alt="fruits"></img>
+                <br />
+                <span className="row-img-description">Fruits</span>
+              </div>
+            )}
+          </ProductConsumer>
+
+          <ProductConsumer>
+            {(value) => (
+              <div
+                className="row-wise-display"
+                onClick={() => {
+                  this.props.props.history.push("/cooking");
+                  value.filterByCategory("cookingNeeds");
+                }}
+              >
+                <img
+                  className="row-img"
+                  src={flour}
+                  alt="cooking Essentials"
+                ></img>
+                <br />
+                <span className="row-img-description">Cooking Essentials</span>
+              </div>
+            )}
+          </ProductConsumer>
+          <ProductConsumer>
+            {(value) => (
+              <div
+                className="row-wise-display"
+                onClick={() => {
+                  this.props.props.history.push("/snacks");
+                  value.filterByCategory("snacks");
+                }}
+              >
+                <img className="row-img" src={snacks} alt="snacks"></img>
+                <br />
+                <span className="row-img-description">Snacks</span>
+              </div>
+            )}
+          </ProductConsumer>
+          <ProductConsumer>
+            {(value) => (
+              <div
+                className="row-wise-display"
+                onClick={() => {
+                  this.props.props.history.push("/household");
+                  value.filterByCategory("dailyNeeds");
+                }}
+              >
+                <img
+                  className="row-img"
+                  src={household}
+                  alt="household items"
+                ></img>
+                <br />
+                <span className="row-img-description">Household Items</span>
+              </div>
+            )}
+          </ProductConsumer>
+          <ProductConsumer>
+            {(value) => (
+              <div
+                className="row-wise-display"
+                onClick={() => {
+                  this.props.props.history.push("/bathroom");
+                  value.filterByCategory("bathroomNeeds");
+                }}
+              >
+                <img
+                  className="row-img"
+                  src={bathroomEssentials}
+                  alt="bathroom essentials"
+                ></img>
+                <br />
+                <span className="row-img-description">Bathroom Essentials</span>
+              </div>
+            )}
+          </ProductConsumer>
+          <ProductConsumer>
+            {(value) => (
+              <div
+                className="row-wise-display"
+                onClick={() => {
+                  this.props.props.history.push("/chocolates");
+                  value.filterByCategory("chocolates");
+                }}
+              >
+                <img
+                  className="row-img"
+                  src={chocolates}
+                  alt="chocolates"
+                ></img>
+                <br />
+                <span className="row-img-description">Chocolates</span>
+              </div>
+            )}
+          </ProductConsumer>
+          <ProductConsumer>
+            {(value) => (
+              <div
+                className="row-wise-display"
+                onClick={() => {
+                  this.props.props.history.push("/beverages");
+                  value.filterByCategory("beverages");
+                }}
+              >
+                <img className="row-img" src={beverages} alt="beverages"></img>
+                <br />
+                <span className="row-img-description">Beverages</span>
+              </div>
+            )}
+          </ProductConsumer>
         </div>
       </>
     );

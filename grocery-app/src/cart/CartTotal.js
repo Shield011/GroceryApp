@@ -2,20 +2,13 @@ import React from "react";
 import { Link } from "react-router-dom";
 
 export default function CartTotal({ value, props }) {
-  const { cartSubTotal, cartTax, shippingCharges, cartTotal, clearCart } =
-    value;
+  const { cartSubTotal, cartTax, shippingCharges, cartTotal, clearCart } = value;
   const { cart } = value;
 
   const checkoutHandler = () => {
     localStorage.setItem("cart", JSON.stringify(cart));
-    const userEmail = JSON.parse(localStorage.getItem("email"));
-    const userPass = JSON.parse(localStorage.getItem("password"));
-    if (userEmail.length === 0 && userPass.length === 0){
-      alert("You need to login First");
-      <Link to = "/" />
-    }else {
-      <Link to = "/checkout" />
-    }
+      this.props.history.push("/checkout")
+    
   };
 
   return (

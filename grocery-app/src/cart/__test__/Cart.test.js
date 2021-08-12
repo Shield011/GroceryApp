@@ -1,16 +1,13 @@
-import React from "react"
-import ReactDom from 'react-dom';
-import EmptyCart from "../EmptyCart"
-import { render } from "@testing-library/react"
-import "@testing-library/jest-dom/extend-expect"
+import React from "react";
+import ReactDom from "react-dom";
+import EmptyCart from "../EmptyCart";
+import CartTotal from "../CartTotal";
+import { render } from "@testing-library/react";
+import "@testing-library/jest-dom/extend-expect";
 
+test("header renders with correct text", () => {
+  const component = render(<EmptyCart />);
+  const headerEl = component.getByTestId("header");
 
-test("header renders with correct text" , () => {
-    const component = render(<EmptyCart />);
-    const headerEl = component.getByTestId("header");
-
-
-
-    expect(headerEl.textContent).toBe("Your have no item added in your Cart")
-
-})
+  expect(headerEl.textContent).toBe("Your have no item added in your Cart");
+});
