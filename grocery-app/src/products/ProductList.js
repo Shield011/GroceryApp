@@ -11,8 +11,8 @@ export default class ProductList extends Component {
       
       <React.Fragment>
 
-        <Navbar />
-        <div className =  "py-5">
+        <Navbar props = {this.props}/>
+        <div className =  "py-5" >
         <Title name = "All" title = "products" />
         <div className = "container">
         <div className="row">
