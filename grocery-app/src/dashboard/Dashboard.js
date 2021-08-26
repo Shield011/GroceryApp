@@ -1,5 +1,4 @@
 import React, { Component } from "react";
-import { Link } from "react-router-dom";
 import fastdelivery from "../assests/fastdelivery.jpg";
 import freshfoodadd from "../assests/freshfoodadd.png";
 import fruits from "../assests/fruits.jpg";

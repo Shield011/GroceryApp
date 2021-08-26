@@ -1,7 +1,6 @@
 import React from "react";
 import { Link } from "react-router-dom";
 import { Formik } from "formik";
-import * as EmailValidator from "email-validator";
 import * as Yup from "yup";
 import "./login.css";
 
@@ -70,16 +69,16 @@ const Login = (props) => (
           {errors.password && touched.password && (
             <div className="input-feedback">{errors.password}</div>
           )}
-          {/* <Link to = "/dashboard"> */}
+          <Link to = "/dashboard">
           <button data-tesid = "login-btn" className = "login-btn" type="submit" disabled={isSubmitting} onClick = {() => {
             localStorage.setItem("email", JSON.stringify(values.email));
             localStorage.setItem("password", JSON.stringify(values.password));
-            props.history.push("/dashboard")
+            // props.history.push("/dashboard")
 
           }}>
             Login
           </button>
-          {/* </Link> */}
+          </Link>
         </form>
         </div>
       );

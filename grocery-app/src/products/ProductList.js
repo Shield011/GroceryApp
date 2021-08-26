@@ -10,7 +10,6 @@ export default class ProductList extends Component {
     return (
       
       <React.Fragment>
-
         <Navbar props = {this.props}/>
         <div className =  "py-5" >
         <Title name = "All" title = "products" />
@@ -19,7 +18,7 @@ export default class ProductList extends Component {
           <ProductConsumer>
             {(value) => {
               return value.products.map((product) => {
-                return <Product key={product.id} product={product} />;
+                return <Product key={product.id} product={product} props = {this.props} />;
               });
             }}
           </ProductConsumer>

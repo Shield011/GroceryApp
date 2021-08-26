@@ -43,7 +43,7 @@ function Checkout(props) {
     localStorage.setItem("city", JSON.stringify(city));
     localStorage.setItem("state", JSON.stringify(state));
     localStorage.setItem("pincode", JSON.stringify(pincode));
-    props.history.push("/endpage");
+    props.history.push("/endpage")
     setFullName("");
     setFullAddress("");
     setEmail("");
@@ -120,10 +120,11 @@ function Checkout(props) {
         </div>
       </form>
 
-   
+      {/* <Link to ="/endpage"> */}
       <button className="checkout-btn" onClick={checkoutHandler}>
         Continue to Checkout
       </button>
+      {/* </Link> */}
      
     </div>
   );

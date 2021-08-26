@@ -21,21 +21,32 @@ export default class Navbar extends Component {
   render() {
     const logoutHandler = () => {
       alert("You will be logged out");
+      this.props.props.history.push("/");
     };
 
     return (
       <>
-        <nav className="navbar navbar-expand-sm navbar-dark px-sm-5 navigation">
-          <Link to="/dashboard">
-            <span className="navbar-brand">Grocery Shop</span>
-          </Link>
+        <nav className="navbar navbar-expand-sm navbar-dark px-sm-5  navigation">
+          <span
+            className="navbar-brand"
+            onClick={() => {
+              this.props.props.history.push("/dashboard");
+            }}
+          >
+            Grocery Shop
+          </span>
 
-          <Link to="/cart" className="ml-auto">
-            <button className="my-cart">
+          <div className="ml-auto">
+            <button
+              className="my-cart"
+              onClick={() => {
+                this.props.props.history.push("/cart");
+              }}
+            >
               <FaShoppingCart className="icons" size="1.2em" />
               My Cart
             </button>
-          </Link>
+          </div>
 
           <div className="dropdown">
             <Dropdown>
@@ -54,13 +65,11 @@ export default class Navbar extends Component {
             </Dropdown>
           </div>
 
-          <Link to="/">
-            <button className="logout-btn" onClick={logoutHandler}>
-              {" "}
-              <IoLogOut className="icons" size="1.5em" />
-              Logout{" "}
-            </button>
-          </Link>
+          <button className="logout-btn" onClick={logoutHandler}>
+            {" "}
+            <IoLogOut className="icons" size="1.5em"  />
+            Logout{" "}
+          </button>
         </nav>
         <div className="row-wise">
           <Link to="/productlist" className="link-to">

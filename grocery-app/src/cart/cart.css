@@ -1,8 +1,11 @@
-
 .cart-image {
   height: 80px;
   width: 100px;
 }
+.container-fluid{
+  margin-top: 30px;
+}
+
 
 .decrement-btn,
 .increment-btn,
@@ -13,6 +16,7 @@
   background-color: transparent;
   margin: 10px;
 }
+
 
 .decrement-btn {
   color: blue;
@@ -32,6 +36,7 @@
 }
 
 .cart-container {
+  margin-top: 30px;
   box-shadow: 1px 1px 1px 1px rgb(218, 218, 218);
   padding: 10px;
   margin: 10px;
@@ -112,10 +117,9 @@
 }
 
 .start-shopping {
-  width: 30%;
+  width: 35%;
   margin-top: 20px;
   text-align: center;
-  margin-left: 35%;
   background-color: rgb(97, 235, 104);
   border: none;
   color: black;
@@ -123,12 +127,12 @@
   padding: 8px;
 }
 .empty-cart {
-  margin-top: 20%;
-  color: grey;
+  margin-top: 18%;
+  text-align: center;
+  color: gray;
 }
-.start-shopping:hover{
+.start-shopping:hover {
   background-color: white;
-  border:2px solid rgb(97, 235, 104);
+  border: 2px solid rgb(97, 235, 104);
   color: black;
 }
-

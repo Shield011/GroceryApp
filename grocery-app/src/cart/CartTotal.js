@@ -1,5 +1,4 @@
 import React from "react";
-import { Link } from "react-router-dom";
 
 export default function CartTotal({ value, props }) {
   const { cartSubTotal, cartTax, shippingCharges, cartTotal, clearCart } = value;
@@ -7,20 +6,21 @@ export default function CartTotal({ value, props }) {
 
   const checkoutHandler = () => {
     localStorage.setItem("cart", JSON.stringify(cart));
-      this.props.history.push("/checkout")
+      props.history.push("/checkout")
     
   };
 
   return (
     <React.Fragment>
       <div className="container-fluid">
-        <div className="row">
+        <div className="cart-row">
           <div className="total-items">
-            <Link to="/dashboard">
-              <button className="clear-cart-btn" onClick={() => clearCart()}>
+              <button className="clear-cart-btn" onClick={() => 
+                {
+                  props.history.push("/dashboard")
+                  clearCart()}}>
                 Clear cart
               </button>
-            </Link>
             <hr />
             <h5>
               <span className="subtotal">Subtotal : Rs. {cartSubTotal}</span>
@@ -40,11 +40,9 @@ export default function CartTotal({ value, props }) {
             <hr />
           </div>
         </div>
-          <Link to = "/checkout">
           <button className="cart-checkout-btn" onClick={checkoutHandler}>
             Checkout
           </button>
-          </Link>
         
       </div>
     </React.Fragment>

@@ -1,5 +1,10 @@
 .navigation {
   background-color: rgb(33, 117, 156) !important;
+  
+}
+
+.navbar-brand{
+  cursor: pointer;
 }
 
 .row-wise {
@@ -19,9 +24,12 @@
 
 .row-wise-display:hover {
   background-color: rgb(216, 211, 211);
-  text-decoration: none;
+  text-decoration: none; 
 }
 
+.icons{
+  margin-right: 8px;
+}
 .row-img {
   border-radius: 50%;
   height: 60px;
@@ -37,6 +45,8 @@
   color: black;
 }
 
+
+
 .my-cart,
 .logout-btn {
   background-color: transparent !important;
@@ -46,6 +56,7 @@
   font-size: 20px;
   border: none !important;
   box-shadow: none !important;
+
 }
 
 .my-cart:hover,
